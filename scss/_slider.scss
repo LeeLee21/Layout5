@@ -1,0 +1,195 @@
+@import "variables";
+@import "fonts";
+@import "mixin_extend";
+.slider_block{
+  background-image: url("../images/Warstwa_8.png");
+  background-color: $jaguar;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 640px;
+  .container{
+    max-width: 1172px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    .slider_title{
+      text-align: center;
+      .slider_title_one{
+        @extend %title_one;
+        padding-top: 63px;
+        letter-spacing: 1.43px;
+      }
+      .slider_title_two{
+        font-family: "Source Sans Pro - Semibold", sans-serif;
+        color: $white;
+        font-size: 36.23px;
+        @extend %twolines;
+        padding: 14.3px 0 33.9px 0;
+        .slider_title_fix{
+          position: relative;
+          left: -0.5px;
+        }
+      }
+    }
+    .slider{
+      overflow: hidden;
+      box-sizing: border-box;
+      width: 1170px;
+      .slider_item1{
+        box-sizing: border-box;
+        padding-right: 5px;
+        .slider_text{
+          @include fonts(24px,$white,32px);
+          font-family: "Source Sans Pro - It", sans-serif;
+          padding-top: 87px;
+        }
+        .commentator{
+          display: flex;
+          padding-top: 22.9px;
+          .commentator_logo{
+            left: 1.4px;
+            position: relative;
+          }
+          .name_and_post{
+            padding: 6px 0 0 25px;
+            .name{
+              @include fonts(16px,$white,21px);
+            }
+            .post{
+              @include fonts(14.1px,$white,21px);
+              font-family: "Source Sans Pro - Bold", sans-serif;
+              padding-top: 5px;
+            }
+          }
+        }
+      }
+      .slider_item2{
+        box-sizing: border-box;
+        padding-left: 24.68px;
+        .slider_text{
+          @include fonts(24px,$white,32px);
+          font-family: "Source Sans Pro - It", sans-serif;
+          padding-top: 87px;
+        }
+        .commentator{
+          display: flex;
+          padding-top: 22.9px;
+          .commentator_logo{
+            position: relative;
+            left: 1px;
+          }
+          .name_and_post{
+            padding: 6px 0 0 25.7px;
+            .name{
+              @include fonts(16px,$white,21px);
+            }
+            .post{
+              @include fonts(14px,$white,21px);
+              font-family: "Source Sans Pro - Bold", sans-serif;
+              padding-top: 5.1px;
+            }
+          }
+        }
+      }
+    }
+    .slick-list{
+      overflow: hidden;
+      padding: 0;
+      .slick-track {
+        display: flex;
+      }
+    }
+    .slick-dots{
+      display: flex;
+      justify-content: center;
+      padding-top: 134px;
+      padding-bottom: 60px;
+      margin-left: 4px;
+      li {
+        list-style-type: none;
+        margin: 0 10px;
+      }
+      button {
+        font-size: 0;
+        padding: 3px 3px;
+        border-radius: 50%;
+        border: 1px solid #b3b3b3 ;
+        background-color: transparent;
+      }
+      .slick-active button {
+        padding: 6px 6px;
+        border: 1px solid $white;
+        background-color: $white;
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .slider_block{
+    .container{
+      .slider{
+        width: 100%;
+        max-width: 1170px;
+        padding: 0 25px;
+        .slider_item1{
+          padding: 0;
+          .slider_text{
+            margin-left: 0;
+          }
+        }
+        .slider_item2{
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 696px){
+  .slider_block{
+    .container{
+      .slider{
+        .slider_item1 {
+          .slider_text{
+            font-size: 22px;
+            padding-top: 40px;
+            text-align: center;
+            /*margin-left: -19px;*/
+          }
+          .commentator{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            .commentator_logo{
+              left: 0;
+            }
+            .name_and_post{
+              padding: 10px 0;
+            }
+          }
+        }
+        .slider_item2 {
+          .slider_text{
+            font-size: 22px;
+            padding-top: 40px;
+            text-align: center;
+          }
+          .commentator{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            .commentator_logo{
+              left: 0;
+            }
+            .name_and_post{
+              padding: 10px 0;
+            }
+          }
+        }
+        .slick-dots{
+          padding-top: 40px;
+        }
+      }
+    }
+  }
+}

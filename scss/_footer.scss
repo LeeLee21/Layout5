@@ -1,0 +1,67 @@
+@import "variables";
+@import "fonts";
+@import "mixin_extend";
+.footer{
+  background-color: #15141a;
+  .container{
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    .social_links{
+      text-align: center;
+      color: $white;
+      padding-top: 56.4px;
+      .col{
+        a{
+          color: $white;
+          opacity: 0.3;
+          &:hover{
+            color: $lightblue;
+            opacity: 1;
+            transition: 0.6s ease;
+          }
+          .fa-twitter{
+            font-size: 17.6px;
+            padding-left: 1.8px;
+          }
+          .fa-dribbble{
+            padding-left: 5px;
+            font-size: 18px;
+            position: relative;
+            top: -1px;
+            left: 8px;
+          }
+          .fa-behance{
+            padding-left: 9px;
+            font-size: 17px;
+            position: relative;
+            left: 16px;
+          }
+          .fa-facebook-f{
+            font-size: 17px;
+            position: relative;
+            top: -1px;
+            right: 1px;
+            padding-right: 17px;
+          }
+          .fa-linkedin-in{
+            font-size: 21px;
+            position: relative;
+            top: -1px;
+            left: -19px;
+          }
+        }
+      }
+    }
+    .copyright{
+      text-align: center;
+      padding: 25px 0 44px;
+      .copyright_text{
+        color: $white;
+        text-transform: uppercase;
+        font-size: 14.3px;
+        opacity: 0.3;
+      }
+    }
+  }
+}

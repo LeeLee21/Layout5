@@ -1,0 +1,30 @@
+@import "variables";
+
+@mixin fonts($fs,$c,$lh){
+  font-size: $fs;
+  color: $c;
+  line-height: $lh;
+}
+%title_one{
+  font-size: 14px;
+  font-family: "Source Sans Pro - Bold", sans-serif;
+  color: $lightblue;
+  text-transform: uppercase;
+}
+
+%title_two{
+  font-size: 36px;
+  font-family: "Source Sans Pro - Semibold", sans-serif;
+  color: $darkgrey;
+}
+%third_text{
+  line-height: 26px;
+  color: $grey;
+  font-size: 18px;
+}
+%twolines{
+  background: linear-gradient(to right, $lightblue 47%, transparent 48%, transparent 53%, $lightblue 52%);
+  background-position: bottom;
+  background-size: 42px 2px;
+  background-repeat: no-repeat;
+}
